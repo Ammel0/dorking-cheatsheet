@@ -47,10 +47,67 @@ Essa técnica é amplamente usada para:
 
 ---
 
-### Consultas avançadas recorrentes:
-* 
+## Exemplos de Consultas avançadas recorrentes:
+
+##### - Buscar documentos confidenciais por tipo e conteúdo
+`filetype:pdf | filetype:xls | filetype:doc "confidencial" OR "internal"`
+
+##### - Encontrar arquivos com senhas expostas
+`intitle:"index of" (passwords.txt | credentials.csv | config.php)`
+
+##### - Coletar e-mails corporativos de um domínio
+`site:empresaalvo.com.br intext:"@empresaalvo.com.br"`
+
+##### - Encontrar diretórios de backup e exportações
+`intitle:"index of" (backup | .sql | export)`
+
+##### - Pegar mensagens de erro que revelam tecnologia ou versão
+`intext:"Warning: mysql_fetch" | intext:"Deprecated: Function" site:.br`
+
+##### - Localizar câmeras IP acessíveis publicamente
+`inurl:/view/index.shtml | inurl:top.htm intext:"camera"`
+
+##### - Encontrar páginas de administração
+´inurl:admin OR inurl:login intitle:"admin panel"´
+
+##### - Localizar arquivos de configuração (.env, .ini, .bak)
+`inurl:.env | inurl:.ini | filetype:bak`
+
+##### - Buscar imagens com metadados sensíveis
+`site:imgur.com filetype:jpg OR filetype:png "confidencial"`
+
+##### - Detectar CMS e suas falhas
+`inurl:wp-content OR inurl:joomla intitle:"index of"`
+
+##### - Localizar arquivos de log abertos
+`intitle:"index of" (log.txt | error.log | access.log)`
+
+##### - Descobrir links internos de sistemas privados
+`site:intranet.empresa.com.br inurl:dashboard OR inurl:status`
+
+##### - Encontrar documentos de RH e currículos
+`filetype:pdf (currículo OR "curriculum vitae") site:empresa.com`
+
+##### - Listar repositórios e arquivos de versão
+`intitle:"index of" (.git | .svn | .hg)`
+
+##### - Verificar exposições em subdomínios
+`site:*.empresa.com -www`
+
+##### - Combinar múltiplas técnicas para buscas refinadas
+`site:empresa.com filetype:xls intext:"senha" inurl:restrito`
+
+---
 
 ### Para aproveitar outras consultas prontas:
 A *Google Hacking Database (GHDB)* é mantida pela Offensive Security e traz uma vasta coleção de *dorks* categorizados para resultados especificos.
 
 [Link dos Dorks por ExploitDB](https://www.exploit-db.com/google-hacking-database)
+
+--- 
+
+⚠️ Aviso Legal
+Este conteúdo é exclusivamente para fins educacionais e de teste controlado.
+O uso em ambientes não autorizados pode ser crime digital e causar implicações legais graves.
+
+Contribua com novos dorks por Pull Request!
