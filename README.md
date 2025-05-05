@@ -110,4 +110,7 @@ A *Google Hacking Database (GHDB)* é mantida pela Offensive Security e traz uma
 Este conteúdo é exclusivamente para fins educacionais e de teste controlado.
 O uso em ambientes não autorizados pode ser crime digital e causar implicações legais graves.
 
-Contribua com novos dorks por Pull Request!
+---
+
+### Contribua com novos dorks por Pull Request!
+
