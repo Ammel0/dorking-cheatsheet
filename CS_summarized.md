@@ -71,4 +71,5 @@
 
 ##### - Combinar múltiplas técnicas para buscas refinadas
 `site:empresa.com filetype:xls intext:"senha" inurl:restrito`
+
 ---
