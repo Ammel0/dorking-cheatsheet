@@ -1,26 +1,3 @@
-# Guia Completo de Google Dorking: Operadores, Sintaxe, Exemplos e Aplicações em Segurança
-
-## O que é Google Dorking?
-
-> **Google Dorking** (Google Hacking, ou simplesmente, Dorking) é uma técnica de busca avançada que utiliza operadores específicos no Google para encontrar informações que não são normalmente acessadas por pesquisas comuns. É frequentemente usada em *OSINT* para captar informações sensiveis que porventura estão desprotegidas.
----
-
-Essa técnica é amplamente usada para:
-- Encontrar arquivos confidenciais (senhas, backups, logs)
-- Descobrir diretórios e dispositivos expostos
-- Realizar testes de segurança (pentest)
-- Coletar informações via OSINT
-- Localizar arquivos sensíveis (.sql, .txt, .xls, etc.)
-- Encontrar diretórios listados
-- Descobrir dispositivos IoT expostos
-- Identificar falhas de configuração
-- Coletar e-mails e metadados
-- Fazer footprinting de alvos em auditorias de segurança
-
----
-
-## Tabela de Operadores Google Dorking
-
 | Operador           | Descrição                                                                 | Exemplo                                      |
 |--------------------|---------------------------------------------------------------------------|----------------------------------------------|
 | `site:`            | Restringe a busca a um domínio específico                                  | `site:gov.br`                                |
@@ -46,8 +23,6 @@ Essa técnica é amplamente usada para:
 | `define:`          | Retorna definições da palavra                                              | "define: world" /wər(ə)ld/, noun 1. the earth, together with all of its countries, peoples, and natural features. (etc)|
 
 ---
-
-## Exemplos de Consultas avançadas recorrentes:
 
 ##### - Buscar documentos confidenciais por tipo e conteúdo
 `filetype:pdf | filetype:xls | filetype:doc "confidencial" OR "internal"`
@@ -96,18 +71,4 @@ Essa técnica é amplamente usada para:
 
 ##### - Combinar múltiplas técnicas para buscas refinadas
 `site:empresa.com filetype:xls intext:"senha" inurl:restrito`
-
 ---
-
-### Para aproveitar outras consultas prontas:
-A *Google Hacking Database (GHDB)* é mantida pela Offensive Security e traz uma vasta coleção de *dorks* categorizados para resultados especificos.
-
-[Link dos Dorks por ExploitDB](https://www.exploit-db.com/google-hacking-database)
-
---- 
-
-⚠️ Aviso Legal
-Este conteúdo é exclusivamente para fins educacionais e de teste controlado.
-O uso em ambientes não autorizados pode ser crime digital e causar implicações legais graves.
-
-Contribua com novos dorks por Pull Request!
